@@ -1,0 +1,271 @@
+<?xml version = '1.0' encoding = 'UTF-8' ?>
+<PropertyList>
+
+  <path>jetman.ac</path>
+  
+ <animation>
+   <type>shader</type>
+   <shader>chrome</shader>
+   <texture>glass_shader.png</texture>
+   <object-name>visor</object-name>
+ </animation>
+
+  <model>
+    <path>Aircraft/jetman/Models/SmokeTrail.xml</path>
+    <name>SmokeTrail1</name>
+    <offsets>
+      <x-m> 1.500</x-m>
+      <y-m> 0.619</y-m>
+      <z-m> 0.000</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/jetman/Models/SmokeTrail.xml</path>
+    <name>SmokeTrail2</name>
+    <offsets>
+      <x-m> 1.500</x-m>
+      <y-m> 0.484</y-m>
+      <z-m> 0.000</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/jetman/Models/SmokeTrail.xml</path>
+    <name>SmokeTrail3</name>
+    <offsets>
+      <x-m> 1.500</x-m>
+      <y-m>-0.484</y-m>
+      <z-m> 0.000</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/jetman/Models/SmokeTrail.xml</path>
+    <name>SmokeTrail4</name>
+    <offsets>
+      <x-m> 1.500</x-m>
+      <y-m>-0.619</y-m>
+      <z-m> 0.000</z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>SmokeTrail1</object-name>
+    <object-name>SmokeTrail2</object-name>
+    <object-name>SmokeTrail3</object-name>
+    <object-name>SmokeTrail4</object-name>
+    <condition>
+     <greater-than>
+      <property>controls/engines/engine/throttle</property>
+      <value>0.0</value>
+     </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>helmet</object-name>
+    <object-name>visor</object-name>
+    <condition>
+     <greater-than>
+      <property>sim/current-view/view-number</property>
+      <value>0</value>
+     </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>range</type>
+    <min-m>0</min-m>
+    <max-m>8000</max-m>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>helmet</object-name>
+    <object-name>visor</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>70</factor>
+    <center>
+     <x-m>-0.676</x-m>
+     <y-m> 0.000</y-m>
+     <z-m>-0.135</z-m>
+    </center>
+    <axis>
+      <x>1.0</x>
+      <y>0.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>helmet</object-name>
+    <object-name>visor</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>25</factor>
+    <center>
+     <x-m>-0.676</x-m>
+     <y-m> 0.000</y-m>
+     <z-m>-0.135</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightleg</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>7</factor>
+    <center>
+     <x-m> 0.110</x-m>
+     <y-m> 0.096</y-m>
+     <z-m>-0.040</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>leftleg</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>7</factor>
+    <center>
+     <x-m> 0.110</x-m>
+     <y-m> 0.106</y-m>
+     <z-m>-0.042</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightleg</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <center>
+     <x-m> 0.110</x-m>
+     <y-m> 0.096</y-m>
+     <z-m>-0.040</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>leftleg</object-name>
+    <property>controls/flight/elevator</property>
+    <factor>15</factor>
+    <center>
+     <x-m> 0.110</x-m>
+     <y-m> 0.106</y-m>
+     <z-m>-0.042</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightarm</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>10</factor>
+    <center>
+     <x-m>-0.626</x-m>
+     <y-m> 0.082</y-m>
+     <z-m>-0.028</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>leftarm</object-name>
+    <property>controls/flight/aileron</property>
+    <factor>10</factor>
+    <center>
+     <x-m>-0.626</x-m>
+     <y-m>-0.082</y-m>
+     <z-m>-0.028</z-m>
+    </center>
+    <axis>
+      <x>0.0</x>
+      <y>-1.0</y>
+      <z>0.0</z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>leftwing</object-name>
+    <property>sim/model/animations/wings/position-norm</property>
+    <interpolation>
+     <entry>			 
+      <ind>0.0</ind>
+      <dep>165.0</dep>
+     </entry>
+     <entry>			 
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+     </entry>
+    </interpolation>
+    <axis>
+     <x1-m>-0.075</x1-m>
+     <y1-m>-0.879</y1-m>
+     <z1-m> 0.203</z1-m>
+     <x2-m>-0.258</x2-m>
+     <y2-m>-0.879</y2-m>
+     <z2-m> 0.216</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>rightwing</object-name>
+    <property>sim/model/animations/wings/position-norm</property>
+    <interpolation>
+     <entry>			 
+      <ind>0.0</ind>
+      <dep>-165.0</dep>
+     </entry>
+     <entry>			 
+      <ind>1.0</ind>
+      <dep>0.0</dep>
+     </entry>
+    </interpolation>
+    <axis>
+     <x1-m>-0.075</x1-m>
+     <y1-m> 0.879</y1-m>
+     <z1-m> 0.203</z1-m>
+     <x2-m>-0.258</x2-m>
+     <y2-m> 0.879</y2-m>
+     <z2-m> 0.216</z2-m>
+    </axis>
+  </animation>
+
+</PropertyList>
